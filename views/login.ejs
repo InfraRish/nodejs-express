@@ -3,13 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <title><%= title %></title>
-    // add css code
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f0f0f0;
+            display: flex;
+            justify-content: center; /* Center horizontally */
+            align-items: center; /* Center vertically */
+            height: 80vh; /* Full viewport height */
         }
         h1 {
             text-align: center;
@@ -22,6 +25,7 @@
             background-color: #fff;
             border-radius: 5px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
         }
         label {
             display: block;
@@ -35,23 +39,23 @@
             border-radius: 3px;
         }
         button {
-            width: 100%;
+            width: 50%;
             padding: 10px;
             background-color: #007bff;
             color: #fff;
             border: none;
             border-radius: 3px;
             cursor: pointer;
+            margin: 0 auto;
         }
     </style>
 </head>
 <body>
-    <h1>Login</h1>
     <form action="/login" method="post">
-        <label for="username">Username:</label>
+        <label for="username">Username</label>
         <input type="text" id="username" name="username" required>
         <br>
-        <label for="password">Password:</label>
+        <label for="password">Password</label>
         <input type="password" id="password" name="password" required>
         <br>
         <button type="submit">Login</button>

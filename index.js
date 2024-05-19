@@ -130,4 +130,8 @@ app.post('/login', (req, res) => {
     });
 });
 
+app.get('/about', (req, res) => {
+    res.render('about', { title: 'About', user: req.session.user });
+});
+
 app.listen(port);

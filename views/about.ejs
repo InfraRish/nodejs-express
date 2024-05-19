@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><%= title %></title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column; /* Stack items vertically */
+            background-color: azure;
+            justify-content: center;
+            align-items: center;
+            height: 80vh;
+            margin: 0; /* Remove default margin */
+        }
+        p {
+            font-size: 1.5rem;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <p>Welcome, <%= user.username %>!</p>
+</body>
+</html>

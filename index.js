@@ -130,8 +130,17 @@ app.post('/login', (req, res) => {
     });
 });
 
+app.get('/logout', (req, res) => {
+    req.session.destroy();
+    res.redirect('/');
+});
+
 app.get('/about', (req, res) => {
-    res.render('about', { title: 'About', user: req.session.user });
+    if (req.session.user) {
+        res.render('about', { title: 'About', user: req.session.user });
+    } else {
+        res.redirect('/login');
+    }
 });
 
 app.listen(port);

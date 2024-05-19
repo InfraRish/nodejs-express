@@ -2,13 +2,35 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column; /* Stack items vertically */
+            background-color: azure;
+            justify-content: center;
+            align-items: center;
+            height: 80vh;
+            margin: 0; /* Remove default margin */
+        }
+        .box {
+            margin-top: 20px; /* Adjust margin as needed */
+        }
+        .box a {
+            color: white;
+            text-decoration: none;
+            color: #000;
+            font-size: 1.5rem;
+            border: grey 1px solid;
+            border-radius: 5px;
+            padding: 10px 20px; /* Add padding for better appearance */
+        }
+    </style>
     <title><%= title %></title>
 </head>
 <body>
     <h1>Welcome</h1>
-    <div>
-        <button>Login</button>
-        <button>Register</button>
+    <div class="box">
+        <a href="/login">Login</a>
     </div>
 </body>
 </html>

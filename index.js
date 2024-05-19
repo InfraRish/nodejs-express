@@ -19,7 +19,21 @@ app.use(session({
 
 // Routes
 app.get('/', (req, res) => {
-    res.render('home', { title: 'Home' });
+    // Check if user is already logged in
+    if (req.session.user) {
+        return res.redirect('/about');
+    } else {
+        res.render('home', { title: 'Home' });
+    }
+});
+
+app.get('/login', (req, res) => {
+    // Check if user is already logged in
+    if (req.session.user) {
+        return res.redirect('/about');
+    } else {
+        res.render('login', { title: 'Login' });
+    }
 });
 
 app.listen(port);
